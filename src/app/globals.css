@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* Lighter Gray */
+    --foreground: 240 10% 3.9%; /* Dark Blue-Gray */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 240 10% 3.9%; /* Dark Blue-Gray */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 240 10% 3.9%; /* Dark Blue-Gray */
+    --primary: 265 53% 42%; /* Purple */
+    --primary-foreground: 0 0% 98%; /* White */
+    --secondary: 0 0% 93%; /* Light Gray #EEEEEE */
+    --secondary-foreground: 240 10% 3.9%; /* Dark Blue-Gray */
+    --muted: 0 0% 93%; /* Light Gray #EEEEEE */
+    --muted-foreground: 240 5% 65%; /* Lighter Blue-Gray */
+    --accent: 45 100% 48%; /* Darker Gold */
+    --accent-foreground: 240 10% 3.9%; /* Dark for contrast on gold */
+    --success: 122 39% 49%; /* Green for gain indicators */
+    --destructive: 0 84.2% 60.2%; /* Red for loss indicators */
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%; /* Slightly darker gray for borders */
+    --input: 0 0% 89.8%; /* Slightly darker gray for inputs */
+    --ring: 265 53% 52%; /* Lighter Purple for focus rings */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    /* Define dark mode colors if needed, keeping consistency with the theme */
+    --background: 240 10% 3.9%; /* Dark Blue-Gray */
+    --foreground: 0 0% 98%; /* White */
+    --card: 240 10% 3.9%; /* Dark Blue-Gray */
+    --card-foreground: 0 0% 98%; /* White */
+    --popover: 240 10% 3.9%; /* Dark Blue-Gray */
+    --popover-foreground: 0 0% 98%; /* White */
+    --primary: 265 53% 62%; /* Lighter Purple for dark mode */
+    --primary-foreground: 265 10% 10%; /* Dark text on lighter purple */
+    --secondary: 240 4% 15%; /* Darker Gray */
+    --secondary-foreground: 0 0% 98%; /* White */
+    --muted: 240 4% 15%; /* Darker Gray */
+    --muted-foreground: 240 5% 65%; /* Lighter Blue-Gray */
+    --accent: 45 100% 58%; /* Slightly darker Gold for dark mode */
+    --accent-foreground: 45 20% 5.9%; /* Dark text on gold */
+    --success: 122 39% 59%; /* Brighter Green for dark mode */
+    --destructive: 0 72% 51%; /* Slightly adjusted Red for dark mode */
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 4% 15%; /* Darker Gray */
+    --input: 240 4% 15%; /* Darker Gray */
+    --ring: 265 53% 62%; /* Lighter Purple */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom class for success text color (Gain - Green) */
+.text-success {
+    color: hsl(var(--success));
+}
+.dark .text-success {
+    color: hsl(var(--success)); /* Ensure dark mode uses the same variable */
+}
+
+/* Custom class for destructive text color (Loss - Red) */
+.text-destructive {
+    color: hsl(var(--destructive));
+}
+.dark .text-destructive {
+    color: hsl(var(--destructive)); /* Ensure dark mode uses the same variable */
+}
+
+/* Custom class for success background color if needed */
+.bg-success {
+    background-color: hsl(var(--success));
+}
+.dark .bg-success {
+    background-color: hsl(var(--success));
+}
+
+/* Custom class for destructive background color if needed */
+.bg-destructive {
+    background-color: hsl(var(--destructive));
+}
+.dark .bg-destructive {
+    background-color: hsl(var(--destructive));
+}
