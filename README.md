@@ -4,7 +4,7 @@ A gamified investment simulator that helps users learn to make investment decisi
 
 ### Clone the Repository
 ```bash
-git clone [<repository-url>](https://github.com/bhargaviHQ/uw-fin-agent.git)
+git clone https://github.com/bhargaviHQ/uw-fin-agent.git
 cd uw-fin-agent
 ```
 ### Open terminal to run the following commands : 
